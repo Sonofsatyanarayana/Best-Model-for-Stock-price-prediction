@@ -110,7 +110,7 @@ def predict_next_day(model, data, scaler, window=60):
 
 # -------------------------------
 # MAIN LOOP
-# -------------------------------
+# ------------------------------
 for company, ticker in companies.items():
     print(f"\n🔹 Processing {company} ({ticker})...")
     df = yf.download(ticker, start="2015-01-01", end="2025-09-15")
@@ -153,3 +153,4 @@ for company, ticker in companies.items():
     print(f"\n✅ Final predictions for {company} on {user_date_str}:")
     for name, price in predictions.items():
         print(f"{name}: ₹{price:.2f}")
+
